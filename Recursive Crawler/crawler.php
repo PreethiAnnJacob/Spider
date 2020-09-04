@@ -44,8 +44,7 @@
     function convertLink($url,$path){
         if (substr_compare($path,"//",0,2)==0)
             return parse_url($url)['scheme'].$path;
-        elseif(substr_compare($path,"http://",0,7)==0 or substr_compare($path,"https://",0,8)==0 or
-            substr_compare($path,"www.",0,4)==0)
+        elseif(substr_compare($path,"http://",0,7)==0 or substr_compare($path,"https://",0,8)==0 or substr_compare($path,"www.",0,4)==0)
             return $path;
         else
             return $url.'/'.$path;
